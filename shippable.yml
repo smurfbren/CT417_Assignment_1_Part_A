@@ -1,0 +1,4 @@
+name: CT417_Assignment_1_Part_A_runCI
+type: runCI
+steps:
+  - IN: CT417_Assignment_1_Part_A_ciRepo
