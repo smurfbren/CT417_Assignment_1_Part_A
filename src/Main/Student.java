@@ -19,7 +19,7 @@ public class Student {
         this.Course = c;
         setUsername();
     }
-	
+	 // Get and Set Methods
 	public String getUsername() {
 		return Username;
 	}
@@ -79,11 +79,13 @@ public class Student {
 	        String course = getCourse().getName();
 	        String username = getUsername();
 	        String modules = new String();
+	        
 	        for(int i=0; i<getModules().size(); i++){
 	                    modules += getModules().get(i).getName() + ", ";
 	        }
-	        return "Student: " + this.Name + "ID: " + Integer.toString(ID) + "Username: " + username +
-	                "Course: " +  course +
-	                "Modules: " + modules;
+	        
+	        // prints out the student name, ID as well as course details
+	        
+	        return "Student: " + this.Name +" " + "ID: " + Integer.toString(ID) +" " + "Username: " + username +" " + "Course: " +  course +" " + "Modules: " + modules;
 	    }
 }

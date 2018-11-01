@@ -1,11 +1,10 @@
 import java.util.ArrayList;
-
 import org.joda.time.LocalDate;
 
 public class Course {
 	
 	private String Name;
-	private ArrayList<Module> Modules;
+	private ArrayList<Module> Modules;	// Array list for both the modules as well as a list of students attending the course
 	private ArrayList<Student> Students;
 	private LocalDate SD;
 	private LocalDate ED;
@@ -52,14 +51,17 @@ public class Course {
 	@Override public String toString(){
         String modules = new String();
         for(int x=0; x<getModules().size(); x++){
+        	
                     modules += getModules().get(x).getName() + ", ";
         }
         String students= new String();
         for(int x=0; x<getStudents().size(); x++){
+        	
                     students += getStudents().get(x).getName() + ", ";
         }
-        return "Course: " + Name + "Start Date: " + SD + "End Date: " + ED +
-                "Modules: " +  modules +
-                "Students: " + students  + "\n";
+        
+        //prints out course details
+        
+        return "Course: " + Name + " " +" Start Date: " + SD +" " + "End Date: " + ED +" " + "Modules: " +  modules ;
     }
 }

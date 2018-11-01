@@ -3,13 +3,13 @@ import java.util.ArrayList;
 public class Module {
 	
 	private String Name;
-	private int ID;
+	private String ID;
 	private  ArrayList<Student> ST;
 	private ArrayList<Course> CS;
 	
-	public Module(String name, int id){
+	public Module(String name, String string){
         this.Name = name;
-        this.ID = id;
+        this.ID = string;
         this.CS = new ArrayList<Course>();
         this.ST = new ArrayList<Student>();
     }
@@ -22,11 +22,11 @@ public class Module {
 		Name = name;
 	}
 
-	public int getID() {
+	public String getID() {
 		return ID;
 	}
 
-	public void setID(int id) {
+	public void setID(String id) {
 		ID = id;
 	}
 
@@ -55,9 +55,10 @@ public class Module {
         for(int y=0; y<getStudents().size(); y++){
                     students += getStudents().get(y).getName() + ", ";
         }
-        return "Module: " + Name + "ID: " + Integer.toString(ID) +
-                "Courses: " +  courses +
-                "Students: " + students;
+        
+        //prints out the module details for each student
+        
+        return "Module: " + Name + "ID: " + ID +" " +"Courses: " +  courses +" " + "Students: " + students;
     }
 
 }
